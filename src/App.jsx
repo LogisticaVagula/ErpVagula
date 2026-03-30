@@ -1,3 +1,4 @@
+import Obras from './pages/Obras'
 import { useState } from 'react'
 import { supabase } from './lib/supabase'
 
@@ -150,9 +151,6 @@ function Financeiro() {
 }
 function Cheques() {
   return <EmBreve nome="Cheques" />
-}
-function Obras() {
-  return <EmBreve nome="Obras" />
 }
 function CRM() {
   return <EmBreve nome="CRM Comercial" />
