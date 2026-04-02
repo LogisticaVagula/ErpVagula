@@ -4,6 +4,7 @@ import Login from './pages/Login'
 import Obras from './pages/Obras'
 import Patrimonios from './pages/Patrimonios'
 import Financeiro from './pages/Financeiro'
+import Abrigos from './pages/Abrigos'
 
 const BRAND = '#1B4FD8'
 
@@ -59,12 +60,12 @@ const MENU = [
 ]
 
 // Módulos já construídos
-const MODULOS_ATIVOS = ['obras', 'patrimonios', 'financeiro']
+const MODULOS_ATIVOS = ['obras', 'patrimonios', 'financeiro', 'abrigos']
 
 export default function App() {
   const [user, setUser]           = useState(null)
   const [checking, setChecking]   = useState(true)
-  const [modulo, setModulo]       = useState('patrimonios')
+  const [modulo, setModulo]       = useState('abrigos')
   const [collapsed, setCollapsed] = useState(false)
 
   useEffect(() => {
@@ -234,7 +235,7 @@ export default function App() {
           {modulo === 'dashboard'    && <EmBreve nome="Dashboard"       icon="⊞" desc="Visão geral de obras, financeiro, patrimônios e alertas em tempo real." />}
           {modulo === 'obras'        && <Obras />}
           {modulo === 'patrimonios'  && <Patrimonios />}
-          {modulo === 'abrigos'      && <EmBreve nome="Abrigos"         icon="🏠" desc="Controle de locação, entrega e devolução dos abrigos de canteiro." />}
+          {modulo === 'abrigos'      && <Abrigos />}
           {modulo === 'fabricacao'   && <EmBreve nome="Fabricação"      icon="🏭" desc="Ordens de serviço, rastreabilidade de peças pré-moldadas e estruturas metálicas." />}
           {modulo === 'almoxarifado' && <EmBreve nome="Almoxarifado"    icon="📦" desc="Estoque de materiais, ferramentas e EPIs. Entradas e saídas por obra." />}
           {modulo === 'compras'      && <EmBreve nome="Compras"         icon="🛒" desc="Requisições de obra, cotações, pedidos de compra e recebimento de materiais." />}
